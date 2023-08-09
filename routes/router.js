@@ -26,7 +26,7 @@ router.use(
         let isVerified = auth.tokenVerify(token)
 
         if(!!isVerified) next()
-        else res.status(400).end("Token Expired")
+        else res.status(401).end("Token Expired")
     }
 )
 
